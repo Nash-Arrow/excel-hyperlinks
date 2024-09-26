@@ -11,7 +11,7 @@
     <IconUrl DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-32.png"/>
     <SupportUrl DefaultValue="https://github.com/Nash-Arrow/excel-hyperlinks"/>
     <AppDomains>
-        <AppDomain>https://nash-arrow.github.io</AppDomain>
+        <AppDomain>https://nasharrow.com</AppDomain>
     </AppDomains>
 
     <Hosts>
