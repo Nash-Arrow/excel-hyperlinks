@@ -2,7 +2,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:type="TaskPaneApp">
-    <Id>your-app-id-here</Id>
+    <Id>e7a0ea9a-a222-403f-b790-c79999c2e2ef</Id>
     <Version>1.0.0.0</Version>
     <ProviderName>Nash & Arrow</ProviderName>
     <DefaultLocale>en-US</DefaultLocale>
