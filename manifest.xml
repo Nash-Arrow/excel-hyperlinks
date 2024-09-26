@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+    <Id>your-app-id-here</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>Nash & Arrow</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName>Open URLs Add-in</DisplayName>
+    <Description>Add-in to open URLs from selected cells in the browser</Description>
+    <IconUrl DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-32.png"/>
+    <SupportUrl DefaultValue="https://github.com/Nash-Arrow/excel-hyperlinks"/>
+    <AppDomains>
+        <AppDomain>https://nash-arrow.github.io</AppDomain>
+    </AppDomains>
+
+    <Hosts>
+        <Host Name="Workbook"/>
+    </Hosts>
+
+    <DefaultSettings>
+        <SourceLocation DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/index.html"/>
+    </DefaultSettings>
+
+    <Permissions>ReadWriteDocument</Permissions>
+
+    <Action xsi:type="ExecuteFunction">
+        <FunctionName>openUrls</FunctionName>
+        <DisplayName DefaultValue="Open URLs"/>
+        <Description DefaultValue="Open all URLs in the selected range"/>
+        <Icon>
+            <bt:Image size="16" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-16.png"/>
+            <bt:Image size="32" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-32.png"/>
+            <bt:Image size="80" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-80.png"/>
+        </Icon>
+    </Action>
+
+    <VersionOverrides>
+        <VersionOverride xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" Version="1.0">
+            <Hosts>
+                <Host xsi:type="Workbook">
+                    <Ribbons>
+                        <Ribbon>
+                            <Tabs>
+                                <Tab id="TabHome">
+                                    <Group id="OpenUrlsGroup" label="Open URLs">
+                                        <Control xsi:type="Button" id="OpenUrlsButton" label="Open URLs" size="Large" onAction="openUrls">
+                                            <Icon>
+                                                <bt:Image size="16" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-16.png"/>
+                                                <bt:Image size="32" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-32.png"/>
+                                                <bt:Image size="80" DefaultValue="https://nash-arrow.github.io/excel-hyperlinks/assets/icon-80.png"/>
+                                            </Icon>
+                                        </Control>
+                                    </Group>
+                                </Tab>
+                            </Tabs>
+                        </Ribbon>
+                    </Ribbons>
+                </Host>
+            </Hosts>
+        </VersionOverride>
+    </VersionOverrides>
+</OfficeApp>
